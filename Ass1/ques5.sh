@@ -1,13 +1,13 @@
-read str
+read -p "Enter String: " str
 
-echo "PART A"
+echo "PART A:"
 echo ${str} | rev
 
-echo "PART B"
+echo "PART B:"
 str=$( echo ${str} | rev )
-echo ${str} | tr 0-9A-Za-z 1-9A-Za-z
+echo ${str} | tr "a-zA-Z" "b-zaB-ZA"
 
-echo "PART C"
+echo "PART C:"
 revStr1=${str:${#str}/2}
 
 revStr2=${str:0:${#str}/2}
