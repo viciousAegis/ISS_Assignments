@@ -1,4 +1,4 @@
-input="inp5.txt"
+input="inp3.txt"
 
 echo "PART A"
 echo
