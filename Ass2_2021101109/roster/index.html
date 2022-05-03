@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            font-family: recoleta;
+            font-weight: bold;
+            background-color: antiquewhite;
+        }
+
+        div {
+            padding: 1em;
+            width: 75%;
+            border-radius: 1em;
+            background-color: rgb(221, 202, 180);
+            margin: auto;
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        table {
+            padding: 1em;
+            border-color: black;
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        th,
+        td {    
+            padding: 0.5em;
+            text-align: center;
+        }
+    </style>
+    <link href="http://fonts.cdnfonts.com/css/recoleta" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+</head>
+
+<body>
+    <center>
+        <h1 style="font-family: recoleta;">
+            Time Table
+        </h1>
+        <button id="genBtn">Generate TimeTable</button>
+        <hr>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div>
+            <table border="1px">
+                <tr>
+                    <th></th>
+                    <th>slot 1</th>
+                    <th>slot 2</th>
+                    <th>slot 3</th>
+                    <th>-</th>
+                    <th>slot 4</th>
+                    <th>slot 5</th>
+                    <th>slot 6</th>
+                </tr>
+                <tr>
+                    <th>Monday</th>
+                    <td class="m1"></td>
+                    <td class="m2"></td>
+                    <td class="m3"></td>
+                    <td>R</td>
+                    <td class="m4"></td>
+                    <td class="m5"></td>
+                    <td class="m6"></td>
+                </tr>
+                <tr>
+                    <th>Tuesday</th>
+                    <td class="t1"></td>
+                    <td class="t2"></td>
+                    <td class="t3"></td>
+                    <td>E</td>
+                    <td class="t4"></td>
+                    <td class="t5"></td>
+                    <td class="t6"></td>
+                </tr>
+                <tr>
+                    <th>Wednesday</th>
+                    <td class="w1"></td>
+                    <td class="w2"></td>
+                    <td class="w3"></td>
+                    <td>C</td>
+                    <td class="w4"></td>
+                    <td class="w5"></td>
+                    <td class="w6"></td>
+                </tr>
+                <tr>
+                    <th>Thursday</th>
+                    <td class="m1"></td>
+                    <td class="m2"></td>
+                    <td class="m3"></td>
+                    <td>E</td>
+                    <td class="m4"></td>
+                    <td class="m5"></td>
+                    <td class="m6"></td>
+                </tr>
+                <tr>
+                    <th>Friday</th>
+                    <td class="t1"></td>
+                    <td class="t2"></td>
+                    <td class="t3"></td>
+                    <td>S</td>
+                    <td class="t4"></td>
+                    <td class="t5"></td>
+                    <td class="t6"></td>
+                </tr>
+                <tr>
+                    <th>Saturday</th>
+                    <td class="w1"></td>
+                    <td class="w2"></td>
+                    <td class="w3"></td>
+                    <td>S</td>
+                    <td class="w4"></td>
+                    <td class="w5"></td>
+                    <td class="w6"></td>
+                </tr>
+            </table>
+        </div>
+    </center>
+
+    <script>
+        arr = ['m1', 'm2', 'm3', 'm4', 'm5', 'm6', 't1', 't2', 't3', 't4', 't5', 't6', 'w1', 'w2', 'w3', 'w4', 'w5', 'w6']
+
+        const genBtn = document.querySelector("#genBtn")
+
+        genBtn.addEventListener('click', function onClick(e) {
+            for (let i = 0; i < 18; i++) {
+                subject = prompt(`Enter subject no. ${i + 1}: `)
+                if (subject == '' || subject == null) {
+                    subject = 'N.A.'
+                }
+                id = arr[i]
+                console.log(id)
+                const tds = document.getElementsByClassName(id)
+                for (let j = 0; j < tds.length; j++) {
+                    td = tds[j]
+                    td.innerHTML = ''
+                    td.append(subject)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

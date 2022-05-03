@@ -1,0 +1,71 @@
+body {
+    background-color: #666A86;
+    color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    background-size: contain;
+    background-repeat: repeat;
+}   
+
+
+th, td {
+    padding: 2em;
+}
+
+#btn1 {
+    margin-right: 4em;
+}
+
+#btn2 {
+    margin-left: 4em;
+}
+#links {
+    margin: 0%;
+    padding: 2em;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+}
+/* #newsList {
+    list-style-type: none;
+} */
+.linkElement {
+    
+    color: aliceblue;
+    display: inline;
+    padding: 2.5em;
+    font-size: x-large;
+}
+a {
+    text-decoration: none;
+    color:rgb(54, 48, 37);
+    text-shadow: 0.2em 0.2em 1em rgb(63, 57, 119);
+}
+
+div#polaroid {
+    width: 110%;
+    padding: 0%;
+    background-color: #585B74;
+    border-radius: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+header {
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    border-radius: 1em;
+    background-color: #585B74;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#newsList {
+    padding: 1em;
+    margin: 1em;
+}
+
+#newsInput {
+    padding: 0.5em;
+    border-radius: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

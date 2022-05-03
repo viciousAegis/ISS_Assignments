@@ -66,7 +66,7 @@ done < "$input"
 
 for word in "${dict[@]}"
 do
-        freq=$( tr '[:space:]' '[\n*]' < $input | grep -c $word )
+        freq=$( grep -o -i $word $input | wc -l )
         if [ $freq -gt 1 ]
         then
                 echo "Word: $word - Count of repetition: $freq"
